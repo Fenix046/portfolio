@@ -1,0 +1,199 @@
+/* ====================== ROOT & RESET ====================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* ====================== NAVBAR ====================== */
+.navbar {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.98) !important;
+}
+
+.navbar-brand {
+  color: #60a5fa !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #60a5fa !important;
+}
+
+/* ====================== HERO ====================== */
+.hero {
+  height: 100vh;
+  min-height: 650px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.typing {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: #93c5fd;
+  min-height: 1.2em;
+}
+
+.typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ====================== SECTIONS ====================== */
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ====================== SKILLS ====================== */
+.skill-box {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skill-box i {
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+  transition: all 0.4s ease;
+}
+
+.skill-box span {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.skill-box:hover {
+  transform: translateY(-15px) scale(1.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Skill Hover Colors */
+.php:hover {
+  background: linear-gradient(135deg, #777bb3, #4f5b93);
+}
+.laravel:hover {
+  background: linear-gradient(135deg, #ff2d20, #b31217);
+}
+.mysql:hover {
+  background: linear-gradient(135deg, #00758f, #003b49);
+}
+.bootstrap:hover {
+  background: linear-gradient(135deg, #7952b3, #4c2c92);
+}
+.js:hover {
+  background: linear-gradient(135deg, #f7df1e, #c9b800);
+  color: #1e2937;
+}
+.seo:hover {
+  background: linear-gradient(135deg, #00c9a7, #007f6e);
+}
+.apache:hover {
+  background: linear-gradient(135deg, #d22128, #7a0f14);
+}
+.debug:hover {
+  background: linear-gradient(135deg, #6c757d, #343a40);
+}
+
+/* Icon Glow */
+.skill-box:hover i {
+  transform: scale(1.2);
+  text-shadow:
+    0 0 25px rgba(255, 255, 255, 0.9),
+    0 0 40px rgba(96, 165, 250, 0.8);
+}
+
+/* ====================== TIMELINE & PROJECTS ====================== */
+.timeline-item {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 25px;
+  border-radius: 16px;
+  border-left: 5px solid #60a5fa;
+  transition: all 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 25px;
+  height: 100%;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 768px) {
+  .hero {
+    height: 90vh;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .skill-box i {
+    font-size: 2.6rem;
+  }
+}
