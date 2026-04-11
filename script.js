@@ -85,11 +85,6 @@ fetch(`https://api.github.com/users/${username}/repos`)
               <a href="${repo.html_url}" target="_blank" class="btn btn-primary btn-sm">
                 View Code
               </a>
-
-              <a href="${repo.html_url}/archive/refs/heads/main.zip"
-                 class="btn btn-outline-light btn-sm">
-                Download
-              </a>
             </div>
 
           </div>
